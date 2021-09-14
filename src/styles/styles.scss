@@ -1,5 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import './base/settings';
+@import './base/base';
+
+//Components
+@import './components/auth';
+@import './components/buttons';
+@import './components/links';
