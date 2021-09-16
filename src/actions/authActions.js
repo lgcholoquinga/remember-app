@@ -9,6 +9,7 @@ import { finishLoadingAction, startLoadingAction } from './uiActions';
 
 /* SWEETALERT */
 import Swal from 'sweetalert2';
+import { noteLogout } from './notesAction';
 
 export const startLoginWithEmail = (email, password) => {
   return (dispatch) => {
@@ -65,6 +66,7 @@ export const startLogout = () => {
   return async (dispatch) => {
     await firebase.auth().signOut();
     dispatch(logoutAction());
+    dispatch(noteLogout());
   };
 };
 
